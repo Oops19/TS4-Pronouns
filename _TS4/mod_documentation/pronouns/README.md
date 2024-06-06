@@ -1,5 +1,5 @@
 #  Pronouns for TS4
-This mod helps to remove unwanted characters typed in by accident into pronouns.
+This mod helps to hide unwanted characters typed in by accident into pronouns.
 
 It removes `@` which is often typed in pronouns like `th@eir` or `h@er` by accident.
 With this mod the game will display `their` and `her` properly.
@@ -15,13 +15,15 @@ In this case one may want to keep '@' in the pronoun.
 # Addendum
 
 ## Game compatibility
-This mod has been tested with `The Sims 4` 1.99.264 (2023-07), S4CL 2.7 (2023-06), TS4Lib 0.1.0 (2023-06).
+This mod has been tested with `The Sims 4` 1.107.112, S4CL 3.4, TS4Lib 0.3.20 (2024-05).
 It is expected to be compatible with many upcoming releases of TS4, S4CL and TS4Lib.
 
 ## Dependencies
-* [The Sims 4](https://www.ea.com/games/the-sims/the-sims-4)
-* [S4CL](https://github.com/ColonolNutty/Sims4CommunityLibrary/releases/latest)
+Download the ZIP file, not the sources.
+* [This Mod](../../releases/latest)
 * [TS4-Library](https://github.com/Oops19/TS4-Library/releases/latest)
+* [S4CL](https://github.com/ColonolNutty/Sims4CommunityLibrary/releases/latest)
+* [The Sims 4](https://www.ea.com/games/the-sims/the-sims-4)
 
 If not installed download and install TS4 and these mods.
 All are available for free.
@@ -49,7 +51,7 @@ Some log entries in the log file ('mod_logs' folder) may contain the local usern
 [Donations](https://www.patreon.com/o19)
 
 ## Copyright and License
-* © 2023 [Oops19](https://github.com/Oops19)
+* © 2024 [Oops19](https://github.com/Oops19)
 * License for '.package' files: [Electronic Arts TOS for UGC](https://tos.ea.com/legalapp/WEBTERMS/US/en/PC/)  
 * License for other media unless specified differently: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) unless the Electronic Arts TOS for UGC overrides it.
 This allows you to use this mod and re-use the code even if you don't own The Sims 4.

@@ -2,7 +2,7 @@ from sims4communitylib.mod_support.common_mod_info import CommonModInfo
 
 
 class ModInfo(CommonModInfo):
-    """ Mod info for the S4CL Sample Mod. """
+    """ Mod info for the S4.CL Sample Mod. """
     # To create a Mod Identity for this mod, simply do ModInfo.get_identity(). Please refrain from using the ModInfo of The Sims 4 Community Library in your own mod and instead use yours!
     _FILE_PATH: str = str(__file__)
 
@@ -28,11 +28,16 @@ class ModInfo(CommonModInfo):
 
     @property
     def _version(self) -> str:
-        return '1.2.1'
+        return '1.2.2'
 
 
 """
-1.2.1 Updated documentation
-1.2.0 Regex to remove one '@' within a string. 'B@@Man' > 'B@Man', 'F@@@@hen' > 'F[at][at][At]hen'
-1.0.0 Initial version
+v1.2.2
+    Update README for new TS4 version
+v1.2.1
+    Updated documentation
+v1.2.0
+    Regex to remove one '@' within a string. 'B@@Man' > 'B@Man', 'F@@@@hen' > 'F[at][at][At]hen'
+v1.0.0
+    Initial version
 """
