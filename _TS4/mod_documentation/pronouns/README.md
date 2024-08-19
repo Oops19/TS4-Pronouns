@@ -1,21 +1,91 @@
 #  Pronouns for TS4
-This mod helps to hide unwanted characters typed in by accident into pronouns.
+This mod allows to set all pronouns for a sim at once with a cheat command without using CAS.
 
-It removes `@` which is often typed in pronouns like `th@eir` or `h@er` by accident.
-With this mod the game will display `their` and `her` properly.
+Setting pronouns which can't be set in CAS is possible and EA might consider these as offending.
+There is unfortunately no way to check and block offending pronouns from within this mod, so they will be set no matter what they are.
+Do not upload a sim with pronouns set with ths mood to any EA service unless you are sure that the words are not considered by EA to be offending - the language itself doesn't really matter.
 
-To have one `@` in the resulting pronoun add a 2nd one in CAS. `Men@@Work` will be displayed as `Men@Work`.
+## Cheat Command
+`o19.pronouns` - Show the current pronouns.
+`o19.pronouns |||||` - Remove custom pronouns.
+`o19.pronouns she|her|her|hers|herself|` - Set pronouns.
+`o19.pronouns she|her|her|hers|herself| 1234` - Set pronouns for a random sim with sim_id 1234.
+`o19.pronouns "she or he|her or his|her|hers|herself|"` - Set pronouns with spaces.
+`o19.pronouns she|"her or his"|her|hers|herself|` - Set pronouns with spaces (alternative).
 
-This mod doesn't correct the user supplied pronouns. It's up to the user to fix it in CAS.
-TS4 may detect some fixed pronouns as inappropriate depending on the user and/or selected game language and block their usage.
-In this case one may want to keep '@' in the pronoun.
+Each pronoun must end with a '|'.
+The '|' and/or '"' characters can't be used in a pronoun.
+Pronoun texts with more or less than 5 '|' will be ignored.
+Text after the 5th '|' will be discarded.
 
+#### Type and order of pronouns with examples:
+1. Subjective: `She/He/They/______` would like a grilled cheese.
+2. Objective: o19 told `her/him/them/______` about the best grilled cheese.
+3. Possessive Dependent: Grilled cheese is `her/his/their/______` 1st love.
+4. Possessive Independent: That grilled cheese is `hers/his/theirs/______`.
+5. Reflexive: o19 made the grilled cheese `herself/himself/themselves/______`.
+
+## Automation
+This version also allows to save and load pronouns for all sims.
+Custom pronouns will be loaded and applied whenever a zone is loaded.
+No default file is included so no automation will happen after installing this mod.
+
+### Commands
+* `o19.pronouns.save` - Save the pronouns to `pronouns.sample.{save_id}.txt`
+* `o19.pronouns.load` - Load and apply `pronouns.txt` and `pronouns.{save_id}.txt`
+
+Saving pronouns does not automatically add them to a file which will be read.
+Saving will create files with informative data and never modify a user-created configuration file.
+The saved file needs to be renamed and one should remove all pronouns which are not needed to keep the file short.
+
+The file `pronouns.txt` will be loaded first and can be used to set pronouns for all games.
+To assign new pronouns to all 'Bella Goth' sims in all games this is the right file.
+It should not contain any sim_id .
+
+The file `pronouns.{save_id}.txt` will be loaded afterwards.
+To assign new pronouns to all 'Bella Goth' sims in this save game use this file.
+It may also contain sim_id's which are unique in each save game.
+
+The `o19.pronouns.load` can be used to load the files for debugging purposes.
+
+#### Samples files:
+`pronouns.txt`
+```json
+{
+  "names":{
+    "Cindy#Rella": "he|him|his|his|himself|",
+  }, 
+}
+```
+`pronouns.123.txt`
+```json
+{
+  "names": {
+    "Cindy#Rella": "he|him|his|his|himself|"
+  },
+}
+```
+In each played and new game Cindy will be 'he'.
+Except of the save with ID 123 - there Cindy will be 'them'.
+
+The save game ID is written with `o19.pronouns.save` to the file name.
+
+### Known Issues
+Most set pronouns can be viewed and edited in CAS.
+In case EA accidentally considers one of the pronouns as offending changes to the pronouns can not be saved before removing the offending pronoun(s).
+Either keep the pronouns as-is or clear offending words.
+
+### Alternatives
+ControlMenu has the option to modify the name and pronouns of sims.
+It's in the menu and can be a little bit time consuming to set all 5 pronouns for multiple sims.
+
+Setting the pronouns in TS4 is also possible, except for pronouns which are considered inappropriate by EA for random reasons.
 
 
 # Addendum
 
 ## Game compatibility
-This mod has been tested with `The Sims 4` 1.108.329, S4CL 3.6, TS4Lib 0.3.24 (2024-07-25).
+This mod has been tested with `The Sims 4` 1.108.349, S4CL 3.7, TS4Lib 0.3.24 (2024-07-25).
 It is expected to be compatible with many upcoming releases of TS4, S4CL and TS4Lib.
 
 ## Dependencies

@@ -28,10 +28,21 @@ class ModInfo(CommonModInfo):
 
     @property
     def _version(self) -> str:
-        return '1.2.2'
+        return '2.0.5'
 
 
 """
+v2.0.5
+    Added ability to save and load pronouns for individual sims
+        a) for a specific save game id
+        b) globally
+v2.0.4
+    themself >> themselves
+v2.0.2
+    Updated documentation
+v2.0.0
+    Fix for TS4 v1.108.+
+    Previous version does no longer work due to a code change in TS4.
 v1.2.2
     Update README for new TS4 version
 v1.2.1
