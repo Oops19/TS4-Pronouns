@@ -6,12 +6,12 @@ There is unfortunately no way to check and block offending pronouns from within 
 Do not upload a sim with pronouns set with ths mood to any EA service unless you are sure that the words are not considered by EA to be offending - the language itself doesn't really matter.
 
 ## Cheat Command
-`o19.pronouns` - Show the current pronouns.
-`o19.pronouns |||||` - Remove custom pronouns.
-`o19.pronouns she|her|her|hers|herself|` - Set pronouns.
-`o19.pronouns she|her|her|hers|herself| 1234` - Set pronouns for a random sim with sim_id 1234.
-`o19.pronouns "she or he|her or his|her|hers|herself|"` - Set pronouns with spaces.
-`o19.pronouns she|"her or his"|her|hers|herself|` - Set pronouns with spaces (alternative).
+* `o19.pronouns` - Show the current pronouns.
+* `o19.pronouns |||||` - Remove custom pronouns.
+* `o19.pronouns she|her|her|hers|herself|` - Set pronouns.
+* `o19.pronouns she|her|her|hers|herself| 1234` - Set pronouns for a random sim with sim_id 1234.
+* `o19.pronouns "she or he|her or his|her|hers|herself|"` - Set pronouns with spaces.
+* `o19.pronouns she|"her or his"|her|hers|herself|` - Set pronouns with spaces (alternative).
 
 Each pronoun must end with a '|'.
 The '|' and/or '"' characters can't be used in a pronoun.
@@ -85,7 +85,7 @@ Setting the pronouns in TS4 is also possible, except for pronouns which are cons
 # Addendum
 
 ## Game compatibility
-This mod has been tested with `The Sims 4` 1.108.349, S4CL 3.7, TS4Lib 0.3.24 (2024-07-25).
+This mod has been tested with `The Sims 4` 1.109.185, S4CL 3.7, TS4Lib 0.3.24 (2024-07-25).
 It is expected to be compatible with many upcoming releases of TS4, S4CL and TS4Lib.
 
 ## Dependencies

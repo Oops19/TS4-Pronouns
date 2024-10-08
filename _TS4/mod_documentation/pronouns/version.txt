@@ -1,5 +1,5 @@
-Pronouns v2.0.5 for The Sims 4 v1.108.349 and S4CL v3.7
-Created on 2024-08-19
+Pronouns v2.0.5 for The Sims 4 v1.109.185 and S4CL v3.7
+Created on 2024-10-08
 v2.0.5
     Added ability to save and load pronouns for individual sims
         a) for a specific save game id
