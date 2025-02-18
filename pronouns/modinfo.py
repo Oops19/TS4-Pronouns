@@ -28,10 +28,16 @@ class ModInfo(CommonModInfo):
 
     @property
     def _version(self) -> str:
-        return '2.0.5'
+        return '2.0.7'
 
 
 """
+v2.0.7
+    Added logging for 'o19.pronouns.clear_all'
+v2.0.6
+    Added 'o19.pronouns.clear_all' to remove all pronouns.
+    This might fix lagging issues in case custom pronouns are not cached by the frontend and exchanging a message to retrieve them takes long.
+    
 v2.0.5
     Added ability to save and load pronouns for individual sims
         a) for a specific save game id

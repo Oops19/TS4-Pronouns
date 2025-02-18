@@ -76,6 +76,27 @@ class PronounsManager(metaclass=Singleton):
             elif sim_ids and sim_id in sim_ids:
                 self.pronouns.set_pronouns(sim, sim_ids.get(sim_id))
 
+    def clear_all(self):
+        vn = VanillaNames()
+        for sim in CommonSimUtils.get_all_sims_generator():
+            pronouns = self.pronouns.get_pronouns(sim)
+            if pronouns == PronounsManager.DEFAULT:
+                continue
+            sim_id = CommonSimUtils.get_sim_id(sim)
+            _, sim_name = vn.get_sim_name(sim_id)
+            log.debug(f'CLEAR: {sim_name} ! o19.pronouns {pronouns} {sim_id}')
+            self.pronouns.set_pronouns(sim, PronounsManager.DEFAULT)
+
+    def show_all(self):
+        vn = VanillaNames()
+        for sim in CommonSimUtils.get_all_sims_generator():
+            pronouns = self.pronouns.get_pronouns(sim)
+            if pronouns == PronounsManager.DEFAULT:
+                continue
+            sim_id = CommonSimUtils.get_sim_id(sim)
+            _, sim_name = vn.get_sim_name(sim_id)
+            log.debug(f'SHOW: {sim_name} ! o19.pronouns {pronouns} {sim_id}')
+
     def save(self):
         """
         Save all pronouns which have been loaded and all pronouns of sims in this game.
@@ -145,13 +166,25 @@ class PronounsManager(metaclass=Singleton):
         PronounsManager().save()
         output(f"Configuration saved.")
 
-
     @staticmethod
     @CommonConsoleCommand(ModInfo.get_identity(), 'o19.pronouns.load', 'Load all pronouns.')
     def o19_manage_pronouns_debug_load(output: CommonConsoleCommandOutput):
         PronounsManager().load()
         PronounsManager().apply()
         output(f"Configuration loaded.")
+
+    @staticmethod
+    @CommonConsoleCommand(ModInfo.get_identity(), 'o19.pronouns.clear_all', 'Clear pronouns for all sims.')
+    def o19_manage_pronouns_debug_clear_all(output: CommonConsoleCommandOutput):
+        PronounsManager().clear_all()
+        output(f"Removed all pronouns. See log for details.")
+
+
+    @staticmethod
+    @CommonConsoleCommand(ModInfo.get_identity(), 'o19.pronouns.show_all', 'Log pronouns of all sims.')
+    def o19_manage_pronouns_debug_show_all(output: CommonConsoleCommandOutput):
+        PronounsManager().show_all()
+        output(f"See log for details.")
 
     @staticmethod
     @CommonEventRegistry.handle_events(ModInfo.get_identity().name)
