@@ -33,7 +33,8 @@ class ModInfo(CommonModInfo):
 
 """
 v2.0.7
-    Added logging for 'o19.pronouns.clear_all'
+    Added 'o19.pronouns.show_all' cheat command.
+    Added more logging for 'o19.pronouns.clear_all'
 v2.0.6
     Added 'o19.pronouns.clear_all' to remove all pronouns.
     This might fix lagging issues in case custom pronouns are not cached by the frontend and exchanging a message to retrieve them takes long.
