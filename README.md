@@ -93,7 +93,7 @@ Setting the pronouns in TS4 is also possible, except for pronouns which are cons
 # Addendum
 
 ## Game compatibility
-This mod has been tested with `The Sims 4` 1.112.519, S4CL 3.10, TS4Lib 0.3.36.
+This mod has been tested with `The Sims 4` 1.118.257, S4CL 3.15, TS4Lib 0.3.42.
 It is expected to be compatible with many upcoming releases of TS4, S4CL and TS4Lib.
 
 ## Dependencies

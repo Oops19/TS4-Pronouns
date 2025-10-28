@@ -1,5 +1,6 @@
-Pronouns v2.0.7 for The Sims 4 v1.112.519 and S4CL v3.10
-Created on 2025-02-18
+Pronouns v2.0.7 for The Sims 4 v1.118.257 and S4CL v3.15
+Created on 2025-10-28
 v2.0.7
-    Added logging for 'o19.pronouns.clear_all'
+    Added 'o19.pronouns.show_all' cheat command.
+    Added more logging for 'o19.pronouns.clear_all'
 
