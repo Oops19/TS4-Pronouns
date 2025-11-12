@@ -97,11 +97,12 @@ ControlMenu allows editing names and pronouns via UI. However, it can be time-co
 
 TS4 also supports pronoun editing in CAS — except for entries EA deems inappropriate for unclear reasons.
 
+---
 
 # 📝 Addendum
 
 ## 🔄 Game compatibility
-This mod has been tested with `The Sims 4` 1.119.109, S4CL 3.15, TS4Lib 0.3.42.
+This mod has been tested with `The Sims 4` 1.119.109, S4CL 3.17, TS4Lib 0.3.42.
 It is expected to remain compatible with future releases of TS4, S4CL, and TS4Lib.
 
 ## 📦 Dependencies
